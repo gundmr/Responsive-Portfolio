@@ -1,3 +1,4 @@
+/* media query */
 /* reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -269,9 +270,18 @@ h2 {
     
     
     /* media queries */
-    @media(max-width:700px) {
+    @media(max-width:768px) {
         .main-nav ul{
+            grid-template-columns: 5fr;
+        }
+    
+        .info{
             grid-template-columns: 1fr;
+        }
+    }
+    @media(max-width:640px) {
+        .main-nav ul{
+            grid-template-columns: 3fr;
         }
     
         .info{
