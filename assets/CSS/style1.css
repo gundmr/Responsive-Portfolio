@@ -1,0 +1,280 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of reset */
+
+:root{
+        --primary: white;
+        --dark: black;
+        --light: rgb(235, 235, 235);
+        --template-image: url(background/woods7.jpg) 100%;
+        --accent1: rgb(0, 128, 100);
+        --accent2: rgba(0, 0, 0, 0.637);
+        --shadow: # 0 1px 5px rgba(104, 104, 104, 0.8);
+        --about-image: url(Images/holly_donkey.jpg) 100%;
+        --profile-image1:url(Images/holly_child.jpg) 100%;
+        --profile-image2:url(Images/holly_gift.jpg) 100%;
+        --profile-image3:url(Images/winter_dog.jpg) 100%;
+        --profile-image4:url(Images/farmers.jpg) 100%;
+        --profile-image5:url(Images/store.jpg) 100%;
+    }
+    
+html {
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+        color: var( --dark);
+    }
+    
+body {
+        background: var(--light);
+        margin: 30px 50px;
+        line-height: 1.4;
+    }
+    
+img {
+        max-width: 100%;
+    }
+    
+.wrapper {
+        display: grid;
+    }
+    
+h2 {
+        background: var(--primary);
+        font-family: 'Lobster', cursive;
+        font-size: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 5px 5px 5px 40px;
+        color: var(--accent1);
+        border-bottom: 2px solid black;
+        margin-inline-end: 0;
+        margin-block-end: 0;
+        }
+    
+/* Navigation */
+.main-nav ul {
+        background: var(--template-image);
+        font-family: 'Lobster', cursive;
+        display: grid;
+        text-align: center;
+        grid-gap: 0px;
+        grid-template-columns: repeat(5, 1fr);
+        padding-inline-start: 40px;
+        padding-inline-end: 40px;
+        list-style: none;
+        border-bottom: 2px solid black;
+        justify-content: right;
+    }
+    
+    .main-nav a {
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 22px;
+    }
+    
+    .main-nav a:hover {
+        background: var(--dark);
+        color: var(--light);
+    }
+    
+    .nav_icons {
+        color: var( --dark);
+    }
+    
+    .home_logo {
+        background: var( --dark);
+        color: var( --light);
+        float: left;
+    }
+    
+    /* about */
+    .info {
+        background: var( --primary);
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 30px;
+    }
+    
+    
+    /* Portfolio */
+    .portfolio {
+        background-color: var( --primary);
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        padding: 30px 30px;
+    }
+    
+    
+    /* portfolio styling */
+    .portfolio img {
+        width: 100%;
+        box-shadow: var(--shadow);
+    }
+    
+    .portfolio p {
+        font-size: 16px;
+        margin-bottom: 0;
+        color: var(--light);
+        background-color: var(--accent2);
+        text-align: center;
+        } 
+    
+    /* portfolio - IMAGE 1 */
+    .p-one {
+        grid-area: 1fr;
+        background: var(--profile-image1);
+        background-size: cover;
+        background-position: center;
+        padding: 95% 5% 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* portfolio - IMAGE 2 */
+    .p-two {
+        grid-area: 1fr;
+        background: var(--profile-image2);
+        background-size: cover;
+        background-position: bottom;
+        padding: 95% 5% 5%;
+        display: flex;
+        flex-direction: column;
+        }
+        
+    
+    /* portfolio - IMAGE 3 */
+    .p-three {
+        grid-area: 1fr;
+        background: url(--profile-image3);
+        background-size: cover;
+        background-position: center;
+        padding: 95% 5% 5%;
+        display: flex;
+        flex-direction: column;
+        }
+    
+    /* portfolio - IMAGE 4 */
+    .p-four {
+        grid-area: 1fr;
+        background: url(--profile-image4);
+        background-size: cover;
+        background-position: center;
+        padding: 95% 5% 5%;
+        display: flex;
+        flex-direction: column;
+        }
+    
+    /* portfolio - IMAGE 5 */
+    .p-five {
+        grid-area: 1fr;
+        background: url(--profile-image5);
+        background-size: cover;
+        background-position: center;
+        padding: 95% 5% 5%;
+        display: flex;
+        flex-direction: column;
+        }
+    
+    /* contact form wrapper*/
+    .contact_form {
+        background: var( --primary);
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        padding: 30px 30px;
+    }
+    
+    /* contact- Styling - */
+    #name {
+        width: 100%;
+        }
+    
+    #email {
+        width: 100%;
+        }
+    
+    /* contact page- text box formating */
+    #subject {
+        height: 300px;
+        width: 100%;
+        }
+    
+    /* contact page - submit button */
+    #submit {
+        font-size: 16px;
+        background-color:var(--accent1);
+        color: white;
+        height: 50px;
+        width: 100px;
+        }
+    
+    /* footer */
+    footer {
+        margin-top: 10px;
+        background: var(--template-image);
+        color: var(--light);
+        text-align: center;
+        padding: 16px;
+        border-top: 2px solid black;
+    }
+    
+    
+    
+    /* media queries */
+    @media(max-width:700px) {
+        .main-nav ul{
+            grid-template-columns: 1fr;
+        }
+    
+        .info{
+            grid-template-columns: 1fr;
+        }
+    }
