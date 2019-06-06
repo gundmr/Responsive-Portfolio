@@ -1,49 +1,4 @@
 /* media query */
-/* reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* end of reset */
-
 :root{
         --primary: white;
         --dark: black;
@@ -79,7 +34,7 @@ img {
 .wrapper {
         display: grid;
     }
-    
+
 h2 {
         background: var(--primary);
         font-family: 'Lobster', cursive;
@@ -193,7 +148,7 @@ h2 {
     /* portfolio - IMAGE 3 */
     .p-three {
         grid-area: 1fr;
-        background: url(--profile-image3);
+        background: var(--profile-image3);
         background-size: cover;
         background-position: center;
         padding: 95% 5% 5%;
@@ -204,7 +159,7 @@ h2 {
     /* portfolio - IMAGE 4 */
     .p-four {
         grid-area: 1fr;
-        background: url(--profile-image4);
+        background: var(--profile-image4);
         background-size: cover;
         background-position: center;
         padding: 95% 5% 5%;
@@ -215,7 +170,7 @@ h2 {
     /* portfolio - IMAGE 5 */
     .p-five {
         grid-area: 1fr;
-        background: url(--profile-image5);
+        background: var(--profile-image5);
         background-size: cover;
         background-position: center;
         padding: 95% 5% 5%;
@@ -266,24 +221,88 @@ h2 {
         padding: 16px;
         border-top: 2px solid black;
     }
+
+   
     
     
     
     /* media queries */
-    @media(max-width:768px) {
-        .main-nav ul{
-            grid-template-columns: 5fr;
+    @media(max-width:980px) {
+        .portfolio {
+            grid-template-columns: repeat(auto-fit, minmax(375px, 2fr));
         }
-    
-        .info{
-            grid-template-columns: 1fr;
+
+        .p-one {
+            width: 100%;
+        }
+        .p-two {
+            width: 100%;
+        }
+        .p-three {
+            width: 100%;
+        }
+        .p-four {
+            width: 100%;
+        }
+        .p-five {
+            width: 100%;
         }
     }
-    @media(max-width:640px) {
-        .main-nav ul{
-            grid-template-columns: 3fr;
+
+    @media(max-width:768px) {
+        .portfolio {
+            grid-template-columns: repeat(auto-fit, minmax(375px, 2fr));
         }
-    
+
+        .p-one {
+            width: 90%;
+        }
+        .p-two {
+            width: 90%;
+        }
+        .p-three {
+            width: 90%;
+        }
+        .p-four {
+            width: 90%;
+        }
+        .p-five {
+            width: 90%;
+        }
+    }
+
+    @media(max-width:640px) {
+        .main-nav > a {
+            grid-template-columns: repeat(auto-fit, minmax(375px, 3fr));
+        }
+        .nav_icons {
+            width: 100%;
+        }
+        .home_logo {
+            width: 335px;
+            float: center;
+        }
+
+        .portfolio {
+            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+        }
+
+        .p-one {
+            width: 90%;
+        }
+        .p-two {
+            width: 90%;
+        }
+        .p-three {
+            width: 90%;
+        }
+        .p-four {
+            width: 90%;
+        }
+        .p-five {
+            width: 90%;
+        }
+
         .info{
             grid-template-columns: 1fr;
         }
